@@ -1,0 +1,40 @@
+{
+    "name": "restaurant inquiry and reservation",
+    "description": "Assist user in finding a restaurant and/or making a reservation based on search and reservation constraints.",
+    "processes": [
+        {
+            "name": "Prompt for search constraints",
+            "description": "Request user to provide search constraints if not specified.",
+            "required_info": ["area", "price", "food", "name"]
+        },
+        {
+            "name": "Query restaurant by name",
+            "description": "Retrieve restaurant details when a specific name is provided.",
+            "required_info": ["name"],
+            "process": [
+                "Use Restaurant Query tool with the exact input format 'name: [user-provided name]'"
+            ]
+        },
+        {
+            "name": "Query and recommend restaurants",
+            "description": "Search and suggest restaurants based on user constraints.",
+            "required_info": ["area", "price", "food"],
+            "process": [
+                "Use Restaurant Query tool with the exact input format 'area: [area], price: [price], food: [food]'"
+            ]
+        },
+        {
+            "name": "Prompt for reservation details",
+            "description": "Request missing reservation constraints.",
+            "required_info": ["people", "day", "time", "name"]
+        },
+        {
+            "name": "Restaurant reservation",
+            "description": "Book the restaurant with provided constraints, handling alternatives.",
+            "required_info": ["name", "people", "day", "time"],
+            "process": [
+                "Use restaurant booking system with exact input format 'name: [restaurant name], people: [value], day: [value], time: [value]'"
+            ]
+        }
+    ]
+}

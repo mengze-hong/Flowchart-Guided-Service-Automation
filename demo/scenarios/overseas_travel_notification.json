@@ -1,0 +1,50 @@
+{
+    "name": "overseas travel notification",
+    "description": "customer notify that they will be traveling and want to make sure that their credit card can be used overseas without getting blocked",
+    "relevant_products": [
+        {
+            "name": "Multi Currency Feature",
+            "info": [
+                "Description: ABC credit card has a Multi Currency Feature,  which has one of the best foreign exchange rates in the market. The feature allows to hold MYR and twelve (12) foreign currencies in one account. This means user can hold different currencies, like the Euro or Pound Sterling, and convert them with our competitive exchange rates.",
+                "Setup: It's easy to set up via the Connect App: After logging in, click on Menu, then tap on Foreign Currency Deposit, select the currency and amount, and follow the steps.",
+                "Tutorial: A tutorial video on YouTube by searching 'ABC Bank Multi Currency Feature'."
+            ]
+        },
+        {
+            "name": "Travel Insurance",
+            "info": [
+                "Description: Travel innsurance has a special offer with 10% cashback if sign up today."
+            ]
+        }
+    ],
+    "processes": [
+        {
+            "name": "overseas travel notification setup",
+            "required_info": [
+                {"name": "start_date", "type": "date", "description": "start date of overseas travel"},
+                {"name": "end_date", "type": "date", "description": "end date of overseas travel"}
+            ],
+            "process": [
+                "Tell customer you’re happy to help.",
+                "Ask required infos.",
+                "Must ask customer to confirm all requested infos for security.",
+                "Let them know that their overseas travel notification has now been setup.",
+                "Notify them that this does not guarantee that their card will not be blocked should there be any transactions that the bank deems to be suspicious. However, if their card does end up being blocked for a transaction that the customer performs themselves, they can reach out to us via Live Chat. They may also call in, but Live Chat may be a better option for them to avoid any international call charges. "
+            ]
+        },
+        {
+            "name": "App guidance",
+            "required_info": [],
+            "process": [
+                "Reply: Swipe to Credit Card page and tap your card > tap 'Services' > select 'Notify Overseas Travel'. Update your travel details within the app and click 'Next'. Review the details and tap on 'Authorise' in order to authorise the request."
+            ]
+        },
+        {
+            "name": "Closing Script",
+            "required_info": [],
+            "process": [
+                "After helping the customer and before hanging up, you should confirm by: “Okay [customer name], is there anything else I can assist you with today?”. Slight variations are allowed."
+            ]
+        }
+    ]
+}

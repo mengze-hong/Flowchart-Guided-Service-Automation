@@ -1,0 +1,38 @@
+{
+    "name": "train inquiry and ticket purchase",
+    "description": "Assist user in finding a train and/or buying tickets based on search and ticket constraints.",
+    "processes": [
+        {
+            "name": "Prompt for search constraints",
+            "description": "Request user to provide search constraints if not specified.",
+            "required_info": ["departure", "destination", "leave", "arrive", "day"],
+            "process": [
+                "Reply: 'Please provide departure, destination, leave time, arrive time, or day.'"
+            ]
+        },
+        {
+            "name": "Query train by ID",
+            "description": "Retrieve train details when a specific ID is provided.",
+            "required_info": ["train id"],
+            "process": [
+                "Use Train Query tool with the exact input format 'train id: [user-provided id]'"
+            ]
+        },
+        {
+            "name": "Query trains",
+            "description": "Search trains based on constraints and handle multiple results.",
+            "required_info": ["departure", "destination", "leave", "arrive", "day"],
+            "process": [
+                "Use Train Query tool with the exact input format 'departure: [departure], destination: [destination], leave: [leave], arrive: [arrive], day: [day]'"
+            ]
+        },
+        {
+            "name": "Attempt ticket purchase",
+            "description": "Buy tickets with provided constraints.",
+            "required_info": ["train id", "ticket"],
+            "process": [
+                "Use train booking system with exact input format: 'train id: [train id], tickets: [value]'"
+            ]
+        }
+    ]
+}

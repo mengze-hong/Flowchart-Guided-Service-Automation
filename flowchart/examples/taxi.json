@@ -1,0 +1,32 @@
+{
+    "name": "taxi reservation",
+    "description": "Assist user in booking a taxi based on departure, destination, and time constraints.",
+    "processes": [
+        {
+            "name": "Prompt for constraints",
+            "description": "Request user to provide initial constraints if not specified.",
+            "required_info": ["departure", "destination", "leave time", "arrive time"],
+            "process": [
+                "Reply: 'Please provide your departure, destination, and preferred leave or arrive time.'"
+            ]
+        },
+        {
+            "name": "Prompt for departure and destination",
+            "description": "Request missing departure and destination if not provided.",
+            "required_info": ["departure", "destination"]
+        },
+        {
+            "name": "Prompt for time constraint",
+            "description": "Request leave or arrive time if neither is provided.",
+            "required_info": ["leave time", "arrive time"]
+        },
+        {
+            "name": "Taxi reservation",
+            "description": "Book the taxi with provided constraints.",
+            "required_info": ["departure", "destination", "leave time", "arrive time"],
+            "process": [
+                "Use taxi booking system with exact input format: 'departure: [value], destination: [value], leave time: [value], arrive time: [value]'"
+            ]
+        }
+    ]
+}

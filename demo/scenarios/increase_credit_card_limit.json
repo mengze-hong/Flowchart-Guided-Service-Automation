@@ -1,0 +1,54 @@
+{
+    "name": "increasing credit card limit",
+    "description": "customer want to increase their wredit card limit",
+    "processes": [
+        {
+            "name": "Permanent increase",
+            "required_info": [
+                {"name": "amount", "type": "number", "description": "limit amount to increase"}
+            ],
+            "process": [
+                "Tell customer you’re happy to help.",
+                "Ask required infos.",
+                "Must ask customer to confirm all requested infos for security.",
+                "Let them know that their credit limit has now been increased."
+            ]
+        },
+        {
+            "name": "Temporary increase",
+            "required_info": [
+                {"name": "amount", "type": "number", "description": "limit amount to increase"},
+                {"name": "start_date", "type": "date", "description": "start date of temporary increase"},
+                {"name": "end_date", "type": "date", "description": "end date of temporary increase"}
+            ],
+            "process": [
+                "Tell customer you’re happy to help.",
+                "Ask required infos.",
+                "Must ask customer to confirm all requested infos for security.",
+                "Let them know that their credit limit has now been increased."
+            ]
+        },
+        {
+            "name": "App guidance",
+            "required_info": [],
+            "process": [
+                "Reply: Swipe to Credit Card page and tap your card > tap 'Services' > select 'Permanent Increase Limit'. Select your employment type, ensure you have the necessary documents ready. Select Credit Card, enter new limit and complete details. Upload your supporting documents. Tap on 'Authorise' in order to authorise the request."
+            ]
+        },
+        {
+            "name": "Online Banking guidance",
+            "required_info": [],
+            "process": [
+                "Reply: Click 'Other Services' > under 'Credit Card' select 'Request Increase in Credit Limit'. Select 'Permanent Increase' > click 'Next'. Select Credit Card, enter a new limit and complete all the required details. Upload your supporting documents. Ensure you have the supporting documents ready. Review details and authorise the request on Connect App.",
+                "Notify the customer that there is a 1-hour cooling period for their account security."
+            ]
+        },
+        {
+            "name": "Closing Script",
+            "required_info": [],
+            "process": [
+                "After helping the customer and before hanging up, you should confirm by: “Okay [customer name], is there anything else I can assist you with today?”. Slight variations are allowed."
+            ]
+        }
+    ]
+}

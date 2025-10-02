@@ -1,0 +1,54 @@
+{
+    "name": "hotel inquiry and reservation",
+    "description": "Assist user in finding a hotel and/or making a reservation based on search and reservation constraints.",
+    "processes": [
+        {
+            "name": "Prompt for search constraints",
+            "description": "Request user to provide search constraints if not specified.",
+            "required_info": ["area", "price", "type", "parking", "internet", "stars", "name"],
+            "process": [
+                "Reply: 'Please provide area, price range, hotel type, parking, internet, stars, or name.'"
+            ]
+        },
+        {
+            "name": "Query hotel by name",
+            "description": "Retrieve hotel details when a specific name is provided.",
+            "required_info": ["name"],
+            "process": [
+                "Use Hotel Query tool with the exact input format 'name: [user-provided name]'"
+            ]
+        },
+        {
+            "name": "Query hotels",
+            "description": "Search hotels based on constraints and handle multiple results.",
+            "required_info": ["area", "price", "type", "parking", "internet", "stars"],
+            "process": [
+                "Use Hotel Query tool with the exact input format 'area: [area], price: [price], type: [type], parking: [parking], internet: [internet], stars: [stars]'"
+            ]
+        },
+        {
+            "name": "Prompt for reservation details",
+            "description": "Request missing reservation constraints.",
+            "required_info": ["people", "day", "stay", "name"],
+            "process": [
+                "Reply: 'Please provide the number of people, day, and stay duration for the reservation.'"
+            ]
+        },
+        {
+            "name": "Hotel reservation",
+            "description": "Book the hotel with provided constraints.",
+            "required_info": ["name", "people", "day", "stay"],
+            "process": [
+                "Use hotel booking system with exact input format: 'name: [hotel name], people: [value], day: [value], stay: [value]'"
+            ]
+        },
+        {
+            "name": "Output failure reason",
+            "description": "Handle failed reservation with alternatives.",
+            "required_info": [],
+            "process": [
+                "Reply: 'Booking failed: [failure reason]. Would you like to try a different date or hotel?'"
+            ]
+        }
+    ]
+}

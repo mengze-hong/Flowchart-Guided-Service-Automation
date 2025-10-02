@@ -1,0 +1,32 @@
+{
+    "name": "attraction inquiry",
+    "description": "Assist user in finding an attraction to visit based on search constraints.",
+    "processes": [
+        {
+            "name": "Prompt for search constraints",
+            "description": "Request user to provide search constraints if not specified.",
+            "required_info": ["area", "type", "name"],
+            "process": [
+                "Reply: 'Please provide the area, attraction type, or name to start your search.'"
+            ]
+        },
+        {
+            "name": "Query attraction by name",
+            "description": "Retrieve attraction details when a specific name is provided.",
+            "required_info": ["name"],
+            "process": [
+                "Action: Use Attraction Query tool with the exact input format 'name: [user-provided name]'",
+                "Reply: '[attraction name] is a [type] located at [address] with contact [phone].'"
+            ]
+        },
+        {
+            "name": "Query and recommend attractions",
+            "description": "Search and suggest attractions based on user constraints.",
+            "required_info": ["area", "type"],
+            "process": [
+                "Action: Use Attraction Query tool with the exact input format 'area: [area], type: [type]'",
+                "Reply: 'I found these attractions: [names]. Which would you like to visit?'"
+            ]
+        }
+    ]
+}

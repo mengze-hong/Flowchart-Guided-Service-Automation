@@ -1,0 +1,49 @@
+{
+    "name": "credit card account inquiry",
+    "description": "customer want to inquire their credit card account (e.g. IC number, balance, limit, charges, transactions)",
+    "processes": [
+        {
+            "name": "App guidance for balance/limit",
+            "required_info": [],
+            "process": [
+                "Reply: Swipe to Account or Credit Card page. Tap on the Account or Credit Card that you wish to check the balance and transaction detail. Tap on 'Balance' or 'limit'."
+            ]
+        },
+        {
+            "name": "Online Banking guidance for balance/limit",
+            "required_info": [],
+            "process": [
+                "Reply: At 'Home' tab, click on your account number. Scroll to balanceor limit page."
+            ]
+        },
+        {
+            "name": "App guidance for transaction",
+            "required_info": [],
+            "process": [
+                "Reply: Swipe to Account or Credit Card page. Tap on the Account or Credit Card that you wish to check the balance and transaction detail. Tap on 'Balance' or 'Transactions'. Scroll to view all your transactions."
+            ]
+        },
+        {
+            "name": "Online Banking guidance for transaction",
+            "required_info": [],
+            "process": [
+                "Reply: At 'Home' tab, click on your account number. Scroll to transaction history and select viewing date (can view up to 90 days transaction history). Scroll to view all your transactions."
+            ]
+        },
+        {
+            "name": "Charge Check",
+            "required_info": [],
+            "process": [
+                "If a customer calls in to enquire about certain charges on their statements because they don’t recognize the merchant name, it’s usually because they are afraid of any unauthorized use. In this case, use an empathetic and calm tone and tell them you’ll check. Ask for more details about which transaction they’re specifically referring to. For example: \"I understand you're worried about a charge on your card, and it's completely understandable to be concerned about unauthorized activity. I'm here to help you understand what's going on.\" In this case, 'DCR Marketing Sdn Bhd' is the parent company of Dreamshop – then confirm whether the customer performed the transaction at this merchant. ",
+                "Let them know that some merchants’ names on the statement may differ from the store’s display name because it may be their parent companies’ name or they used a different business registration name. Before your closing statement, reassure them that their account is secure and we do our best to monitor transactions for any suspicious activities."
+            ]
+        },
+        {
+            "name": "Closing Script",
+            "required_info": [],
+            "process": [
+                "After helping the customer and before hanging up, you should confirm by: “Okay [customer name], is there anything else I can assist you with today?”. Slight variations are allowed."
+            ]
+        }
+    ]
+}
